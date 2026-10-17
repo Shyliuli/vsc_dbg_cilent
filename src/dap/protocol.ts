@@ -1,0 +1,20 @@
+import type { DebugProtocol } from '@vscode/debugprotocol';
+
+export type DapRequest = DebugProtocol.Request;
+export type DapResponse = DebugProtocol.Response;
+export type DapEvent = DebugProtocol.Event;
+export type Capabilities = DebugProtocol.Capabilities;
+export type Source = DebugProtocol.Source;
+export type StackFrame = DebugProtocol.StackFrame;
+export type Thread = DebugProtocol.Thread;
+export type Scope = DebugProtocol.Scope;
+export type Variable = DebugProtocol.Variable;
+export type Breakpoint = DebugProtocol.Breakpoint;
+export type ExceptionBreakpointsFilter = DebugProtocol.ExceptionBreakpointsFilter;
+export type DisassembledInstruction = DebugProtocol.DisassembledInstruction;
+export type EvaluateResponseBody = DebugProtocol.EvaluateResponse['body'];
+export type SetBreakpointsResponseBody = DebugProtocol.SetBreakpointsResponse['body'];
+export type StackTraceResponseBody = DebugProtocol.StackTraceResponse['body'];
+export type VariablesResponseBody = DebugProtocol.VariablesResponse['body'];
+export type ScopesResponseBody = DebugProtocol.ScopesResponse['body'];
+export type ThreadsResponseBody = DebugProtocol.ThreadsResponse['body'];

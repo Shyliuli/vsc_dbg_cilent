@@ -1,0 +1,157 @@
+/* VS Code Dark Modern palette, used by the whole workbench. */
+:root {
+  color-scheme: dark;
+
+  --bg-titlebar: #181818;
+  --bg-activitybar: #181818;
+  --bg-sidebar: #181818;
+  --bg-editor: #1f1f1f;
+  --bg-panel: #181818;
+  --bg-widget: #202020;
+  --bg-input: #313131;
+  --bg-hover: #2a2d2e;
+  --bg-selection: #04395e;
+  --bg-tab-inactive: #181818;
+  --bg-tab-active: #1f1f1f;
+
+  --fg: #cccccc;
+  --fg-high: #ffffff;
+  --fg-dim: #9d9d9d;
+  --fg-muted: #6e7681;
+  --border: #2b2b2b;
+  --border-strong: #3c3c3c;
+  --accent: #0078d4;
+  --accent-hover: #026ec1;
+  --accent-text: #4daafc;
+  --error: #f14c4c;
+  --warning: #cca700;
+  --info: #3794ff;
+  --success: #89d185;
+  --bp-red: #e51400;
+  --bp-amber: #ffb000;
+  --bp-gray: #848484;
+  --debug-line-focused: rgba(43, 107, 49, 0.55);
+  --debug-line-other: rgba(54, 89, 58, 0.28);
+  --pc-yellow: #ffcc00;
+
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Noto Sans', 'Helvetica Neue',
+    Arial, sans-serif;
+  --font-mono: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Liberation Mono', 'Consolas', 'Menlo',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-editor);
+  color: var(--fg);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+input,
+select,
+textarea {
+  background: var(--bg-input);
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  color: var(--fg);
+  padding: 3px 6px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+}
+
+select {
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  accent-color: var(--accent);
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.codicon {
+  display: inline-block;
+  line-height: 1;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5f5f5f;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body.resizing {
+  cursor: col-resize;
+  user-select: none;
+}
+
+body.resizing-vertical {
+  cursor: row-resize;
+  user-select: none;
+}

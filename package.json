@@ -1,0 +1,40 @@
+{
+  "name": "gdb-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "description": "A VS Code-style GDB debugger front end speaking the Debug Adapter Protocol to gdb --interpreter=dap",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run typecheck && vite build",
+    "start": "node server/main.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "test": "node --test test/",
+    "check": "npm run typecheck && npm test",
+    "verify": "npm run check && npm run build"
+  },
+  "dependencies": {
+    "@vscode/codicons": "^0.0.44",
+    "@vscode/debugprotocol": "^1.68.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "jsonc-parser": "^3.3.1",
+    "monaco-editor": "^0.55.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "ws": "^8.18.3",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  // Demo configurations for the debugger front end. This is a regular VS Code
+  // launch.json; the only difference is that debug type is ignored, because
+  // every configuration is driven through gdb's built-in DAP interpreter.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "cpp-demo: launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/cpp-demo/build/cpp-demo",
+      "args": ["demo-argument"],
+      "cwd": "${workspaceFolder}/examples/cpp-demo",
+      "stopAtEntry": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        { "description": "Enable pretty-printing", "text": "set print pretty on" }
+      ]
+    },
+    {
+      "name": "cpp-demo: stop at main",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/cpp-demo/build/cpp-demo",
+      "cwd": "${workspaceFolder}/examples/cpp-demo",
+      "stopAtEntry": true,
+      "MIMode": "gdb"
+    },
+    {
+      "name": "cpp-demo: attach to pid",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "${workspaceFolder}/examples/cpp-demo/build/cpp-demo",
+      "processId": "${command:pickProcess}",
+      "MIMode": "gdb"
+    },
+    {
+      // The inferior gets a real pty: the integrated terminal accepts stdin,
+      // and program stdout/stderr appear there instead of the Debug Console.
+      "name": "stdio-echo: terminal input",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/stdio-echo/build/stdio-echo",
+      "cwd": "${workspaceFolder}/examples/stdio-echo",
+      "console": "integratedTerminal",
+      "stopAtEntry": false,
+      "MIMode": "gdb"
+    }
+  ]
+}
